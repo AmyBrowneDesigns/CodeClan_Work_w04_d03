@@ -17,6 +17,10 @@ def tasks():
 
 # NEW
 # GET '/tasks/new'
+@tasks_blueprint.route("/tasks/new")
+def new_task():
+    return render_template("/tasks/new.html")
+
 
 # CREATE
 # POST '/tasks'

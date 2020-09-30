@@ -12,8 +12,9 @@
   <header>
     <nav>
       <ul class="menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/tasks">Tasks</a></li>
+        <li><a href="{{  url_for('home')  }}">Home</a></li>
+        <li><a href="{{  url_for('tasks.tasks')  }}">Tasks</a></li>          <!-- url_for means that we dont need to chane the link in the html if we change the path which is in the blueprint -->
+        <li><a href="{{  url_for('tasks.new_task')  }}">New Tasks</a></li>    <!-- without blueprints the href would be /tasks/new -->
       </ul>
     </nav>
   </header>
