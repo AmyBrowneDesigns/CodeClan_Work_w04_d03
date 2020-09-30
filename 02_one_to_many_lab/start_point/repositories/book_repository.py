@@ -4,4 +4,10 @@ from models.book import Book
 
 import repositories.author_repository as author_repository
 
-# methods go here
+def save(book):
+    sql = "INSERT INTO books (title, genre, author_id) VALUES (%s, %s, %s) RETURNING *"
+    values = [book.title, book.genre, book.author.id]
+    result = run_sql(sql, values)
+    id = results[0]['id']
+    book.id = id
+    return book
