@@ -1,6 +1,33 @@
 {%  extends "base.html"  %}
 {% block content  %}
 
-add form here
+<form action="/tasks" method='POST'>
+<div>
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description">
+</div>
 
+<div>
+    <label for="duration">Duration:</label>
+    <input type="number" name="duration" id="duration">
+</div>
+
+<div>
+    <label for="completed">Completed:</label>
+    <select name="completed" id="completed">
+        <option value="true">True</option>
+        <option value="false">False</option>
+    </select>
+</div>
+
+<div>
+    <label for="user">User:</label>
+    <select name="user" id="user">
+        <!-- TODO -->
+    </select>
+</div>
+
+<button type="submit">Add Task</button>
+
+</form>
 {%  endblock  %}
