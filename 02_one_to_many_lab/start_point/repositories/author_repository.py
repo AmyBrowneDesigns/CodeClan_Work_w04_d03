@@ -4,4 +4,4 @@ from models.book import Book
 
 
 
-# methods go in here
+# methods (crud) go in here

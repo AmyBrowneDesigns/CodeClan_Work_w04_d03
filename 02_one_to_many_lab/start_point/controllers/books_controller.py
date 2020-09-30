@@ -10,3 +10,6 @@ tasks_blueprint = Blueprint("books", __name__)
 def books():
     books =  book_repository.select_all()
     return render_template("books/index.html", all_books = books)
+
+
+
